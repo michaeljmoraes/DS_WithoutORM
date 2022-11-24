@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), Master-detail document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Document>
+  <Properties>
+    <Type>Master-detail Document</Type>
+    <DatabaseProvider>77a9b459-6f15-4675-8e18-cdd88f58e376</DatabaseProvider>
+    <ProviderVersion>2.3.285.0</ProviderVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+  </Properties>
+  <Connection Name="dbdocstorage01.localhost:5433">
+    <Category>00000000-0000-0000-0000-000000000000</Category>
+    <ConnectionString>User Id=postgres;Host=localhost;Port=5433;Database=dbdocstorage01;Unicode=True;Connection Timeout=15;Default Command Timeout=30;Integrated Security=False</ConnectionString>
+  </Connection>
+  <Views ShowAdditionalViews="True" IsLayoutActiveAttribute="False" MainViewAttribute="Design" MainViewScale="75">
+    <View Name="Design" Active="True" Visible="True">
+      <Data>
+        <Properties LocationX="-1159.88092147014" LocationY="22.0300269984832" Scale="0.7262815" />
+        <Tables>
+          <Table Name="dbdocstorage01.public.category" Type="Table" Left="39" Top="655" Width="165.083755493164" Height="144" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="name" InSelect="True" SortType="0" />
+              <Field Name="description" InSelect="True" SortType="0" />
+              <Field Name="created_at" InSelect="True" SortType="0" />
+              <Field Name="updated_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="dbdocstorage01.public.document" Type="Table" Left="263" Top="610" Width="165.083755493164" Height="234" Collapsed="False" IsMaster="True" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="id_owner" InSelect="True" SortType="0" />
+              <Field Name="id_category" InSelect="True" SortType="0" />
+              <Field Name="name" InSelect="True" SortType="0" />
+              <Field Name="description" InSelect="True" SortType="0" />
+              <Field Name="file_name" InSelect="True" SortType="0" />
+              <Field Name="file_path" InSelect="True" SortType="0" />
+              <Field Name="is_public" InSelect="True" SortType="0" />
+              <Field Name="created_at" InSelect="True" SortType="0" />
+              <Field Name="updated_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="dbdocstorage01.public.download_history" Type="Table" Left="487" Top="380" Width="165.083755493164" Height="126" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="id_document" InSelect="True" SortType="0" />
+              <Field Name="id_user" InSelect="True" SortType="0" />
+              <Field Name="downloaded_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="dbdocstorage01.public.&quot;group&quot;" Type="Table" Left="-560" Top="120" Width="165.083755493164" Height="180" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="id_role" InSelect="True" SortType="0" />
+              <Field Name="name" InSelect="True" SortType="0" />
+              <Field Name="description" InSelect="True" SortType="0" />
+              <Field Name="is_active" InSelect="True" SortType="0" />
+              <Field Name="created_at" InSelect="True" SortType="0" />
+              <Field Name="updated_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="dbdocstorage01.public.role" Type="Table" Left="263" Top="40" Width="165.083755493164" Height="234" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="name" InSelect="True" SortType="0" />
+              <Field Name="description" InSelect="True" SortType="0" />
+              <Field Name="role_type" InSelect="True" SortType="0" />
+              <Field Name="domain" InSelect="True" SortType="0" />
+              <Field Name="action" InSelect="True" SortType="0" />
+              <Field Name="is_active" InSelect="True" SortType="0" />
+              <Field Name="priority" InSelect="True" SortType="0" />
+              <Field Name="created_at" InSelect="True" SortType="0" />
+              <Field Name="updated_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="dbdocstorage01.public.user_group" Type="Table" Left="-280" Top="480" Width="165.083755493164" Height="144" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="id_user" InSelect="True" SortType="0" />
+              <Field Name="id_group" InSelect="True" SortType="0" />
+              <Field Name="created_at" InSelect="True" SortType="0" />
+              <Field Name="updated_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="dbdocstorage01.public.user_profile" Type="Table" Left="263" Top="334" Width="165.083755493164" Height="216" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="id" InSelect="True" SortType="0" />
+              <Field Name="id_role" InSelect="True" SortType="0" />
+              <Field Name="password" InSelect="True" SortType="0" />
+              <Field Name="last_login" InSelect="True" SortType="0" />
+              <Field Name="is_superuser" InSelect="True" SortType="0" />
+              <Field Name="username" InSelect="True" SortType="0" />
+              <Field Name="first_name" InSelect="True" SortType="0" />
+              <Field Name="last_name" InSelect="True" SortType="0" />
+              <Field Name="email" InSelect="True" SortType="0" />
+              <Field Name="is_active" InSelect="True" SortType="0" />
+              <Field Name="created_at" InSelect="True" SortType="0" />
+              <Field Name="updated_at" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+        </Tables>
+        <Links>
+          <Link OutTable="dbdocstorage01.public.category" OutField="id" InTable="dbdocstorage01.public.document" InField="id_category" />
+          <Link OutTable="dbdocstorage01.public.document" OutField="id" InTable="dbdocstorage01.public.download_history" InField="id_document" />
+          <Link OutTable="dbdocstorage01.public.role" OutField="id" InTable="dbdocstorage01.public.&quot;group&quot;" InField="id_role" />
+          <Link OutTable="dbdocstorage01.public.user_group" OutField="id_group" InTable="dbdocstorage01.public.&quot;group&quot;" InField="id" />
+          <Link OutTable="dbdocstorage01.public.role" OutField="id" InTable="dbdocstorage01.public.user_profile" InField="id_role" />
+          <Link OutTable="dbdocstorage01.public.user_profile" OutField="id" InTable="dbdocstorage01.public.document" InField="id_owner" />
+          <Link OutTable="dbdocstorage01.public.user_profile" OutField="id" InTable="dbdocstorage01.public.download_history" InField="id_user" />
+          <Link OutTable="dbdocstorage01.public.user_profile" OutField="id" InTable="dbdocstorage01.public.user_group" InField="id_user" />
+        </Links>
+      </Data>
+    </View>
+    <View Name="Data" Visible="True" />
+  </Views>
+  <Settings>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PageOptions">
+      <TopLeftMargins>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
+      </TopLeftMargins>
+      <BottomRightMargins>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
+      </BottomRightMargins>
+      <PaperSize>
+        <Width>827 in/100</Width>
+        <Height>1169 in/100</Height>
+      </PaperSize>
+    </Options>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PrintOptions" />
+  </Settings>
+</Document>
