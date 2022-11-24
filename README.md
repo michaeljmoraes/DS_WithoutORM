@@ -5,3 +5,5 @@ The PageSize will be received from front-end, but, if need the backend is prepar
 This project is under construction.
 
 
+DataBase Scripts:
+https://github.com/michaeljmoraes/DS_WithoutORM/tree/master/solutionfiles/db
