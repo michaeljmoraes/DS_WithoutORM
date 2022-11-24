@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "8b20a78d-586e-45cb-b06d-ad1dd68989c5",
+		"name": "DS Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4030559"
+	},
+	"item": [
+		{
+			"name": "V2",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "GetAll",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dsapi}}/api/v2/user/get-all?pageIndex=1&pageSize=10",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"user",
+										"get-all"
+									],
+									"query": [
+										{
+											"key": "pageIndex",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dsapi}}/api/v2/user/get/21",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"user",
+										"get",
+										"21"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByUserName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dsapi}}/api/v2/user/get-byusername/michaeljmoraes",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"user",
+										"get-byusername",
+										"michaeljmoraes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idRole\": 1,\r\n    \"password\": \"123\",\r\n    \"lastLogin\": \"0001-01-01T00:00:00\",\r\n    \"isSuperuser\": false,\r\n    \"username\": \"teteusbionica\",\r\n    \"firstName\": \"Teteus\",\r\n    \"lastName\": \"Bionic\",\r\n    \"email\": \"teteusbionic@gmail.com\",\r\n    \"isActive\": true\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dsapi}}/api/v2/user/insert",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"user",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 21,\r\n    \"idRole\": 1,\r\n    \"password\": \"12356810\",\r\n    \"lastLogin\": \"0001-01-01T00:00:00\",\r\n    \"isSuperuser\": false,\r\n    \"username\": \"teteusbionic\",\r\n    \"firstName\": \"Teteus\",\r\n    \"lastName\": \"Bionic\",\r\n    \"email\": \"teteusbionic@gmail.com\",\r\n    \"isActive\": true\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dsapi}}/api/v2/user/update",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dsapi}}/api/v2/user/delete/20",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"user",
+										"delete",
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Group",
+					"item": [
+						{
+							"name": "GetAll",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dsapi}}/api/v2/group/get-all?pageIndex=1&pageSize=10",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"group",
+										"get-all"
+									],
+									"query": [
+										{
+											"key": "pageIndex",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dsapi}}/api/v2/group/get/7",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"group",
+										"get",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idRole\": 1,\r\n    \"name\": \"group 1\",\r\n    \"description\": \"teteusbionic\",\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dsapi}}/api/v2/group/insert",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"group",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 12,\r\n    \"idRole\": 1,\r\n    \"name\": \"123\",\r\n    \"description\": \"teteusbionic\",\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dsapi}}/api/v2/group/update",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"group",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dsapi}}/api/v2/group/delete/7",
+									"host": [
+										"{{dsapi}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"group",
+										"delete",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "InitialData",
+			"item": [],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dsapi",
+			"value": "https://localhost:7212"
+		}
+	]
+}
