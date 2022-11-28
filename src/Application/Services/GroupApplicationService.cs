@@ -1,12 +1,9 @@
-﻿using Core.DomainObjects;
 using Application.Wrappers;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Application.Services;
-using Domain.Models;
-using Domain.CoreModels;
-using Domain.Repository.User;
-using Microsoft.Extensions.Hosting;
 using AutoMapper;
+using Domain.CoreModels;
+using Domain.Models;
+using Domain.Repository;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Application.Services
 {
@@ -17,12 +14,12 @@ namespace Application.Services
         private readonly IMapper _mapper;
 
         public GroupApplicationService(IMapper mapper,
-            IGroupCommandsRepository groupRepositoryCommands,
-            IGroupQueryRepository groupRepositoryQueries)
+            IGroupCommandsRepository repositoryCommands,
+            IGroupQueryRepository repositoryQueries)
         {
             _mapper = mapper;
-            _repositoryCommands = groupRepositoryCommands;
-            _repositoryQueries = groupRepositoryQueries;
+            _repositoryCommands = repositoryCommands;
+            _repositoryQueries = repositoryQueries;
         }
 
 
@@ -30,9 +27,9 @@ namespace Application.Services
         {
             IEnumerable<ModelError> errors = Enumerable.Empty<ModelError>();
 
-            var user = await _repositoryQueries.GetAsync(id);
+            var entity = await _repositoryQueries.GetAsync(id);
 
-            if (user is null)
+            if (entity is null)
             {
                 return new PageResult<GroupViewModel>
                 {
@@ -40,11 +37,11 @@ namespace Application.Services
                 };
             }
 
-            var userViewModel = _mapper.Map<GroupViewModel>(user);
+            var entityViewModel = _mapper.Map<GroupViewModel>(entity);
 
             var pageResult = new PageResult<GroupViewModel>
             {
-                Data = userViewModel
+                Data = entityViewModel
             };
 
             return pageResult;
@@ -106,7 +103,7 @@ namespace Application.Services
                 pageResult.Errors = pageResult.Errors.Append(new ModelError(ex.Message));
                 return Task.FromResult(pageResult);
             }
-            return Task.FromResult(pageResult); 
+            return Task.FromResult(pageResult);
         }
 
 

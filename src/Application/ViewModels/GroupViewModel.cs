@@ -1,18 +1,23 @@
-﻿using Core.DomainObjects;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core.DomainObjects;
 
 namespace Domain.Models
 {
     public class GroupViewModel : BaseViewModel
     {
-        public int IdRole { get; set; }
-        public string Name { get; set; } = String.Empty;
-        public string? Description { get; set; }
-        public bool IsActive { get; set; } = false;
+        public Int64 Id { get; set; }
+
+        public Int64 IdRole { get; set; }
+
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public bool IsActive { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+
+
     }
 }

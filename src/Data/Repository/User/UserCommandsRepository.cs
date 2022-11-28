@@ -1,17 +1,9 @@
 ﻿using Core.Data;
-using Core.DomainObjects;
 using Data.Repository.Base;
 using Domain.Models;
-using Domain.Repository;
 using Domain.Repository.User;
 using Npgsql;
 using NpgsqlTypes;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.Repository.Users
 {
@@ -61,12 +53,12 @@ namespace Data.Repository.Users
 
 
         }
-    /// <summary>
-    /// Passes the parameters for Update Statement
-    /// </summary>
-    /// <param name="entity"></param>
-    /// <param name="cmd"></param>
-    protected override void UpdateCommandParameters(UserProfile entity, NpgsqlCommand cmd)
+        /// <summary>
+        /// Passes the parameters for Update Statement
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="cmd"></param>
+        protected override void UpdateCommandParameters(UserProfile entity, NpgsqlCommand cmd)
         {
             //cmd.Parameters.AddWithValue("_id", NpgsqlDbType.Bigint, entity.Id);
             cmd.Parameters.AddWithValue("_id_role", NpgsqlDbType.Bigint, entity.IdRole);

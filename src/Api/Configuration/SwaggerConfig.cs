@@ -4,7 +4,7 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Text.Json;
 
-namespace DocumentStorage.Api.Configuration
+namespace Api.Configuration
 {
 
     public static class SwaggerConfig

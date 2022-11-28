@@ -1,20 +1,10 @@
 ﻿using Core.Data;
-using Core.DomainObjects;
-using Data.Extensions;
 using Data.Repository.Base;
 using Domain.Models;
-using Domain.Repository;
 using Domain.Repository.Base;
 using Domain.Repository.User;
 using Npgsql;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Data.Repository.Users
 {
@@ -65,7 +55,7 @@ namespace Data.Repository.Users
         protected override async Task<UserProfile?> Map(NpgsqlDataReader reader)
         {
             UserProfile resulData = new UserProfile();
-            if(!reader.HasRows) return null;
+            if (!reader.HasRows) return null;
 
             if (reader.HasRows)
             {

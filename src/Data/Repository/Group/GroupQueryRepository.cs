@@ -1,14 +1,11 @@
-﻿using Core.Data;
-using Core.DomainObjects;
-using Data.Extensions;
+using Core.Data;
 using Data.Repository.Base;
 using Domain.Models;
 using Domain.Repository;
 using Domain.Repository.Base;
-using Domain.Repository.User;
 using Npgsql;
 
-namespace Data.Repository.Users
+namespace Data.Repository
 {
     public class GroupQueryRepository : BaseQueryRepository<Group>, IGroupQueryRepository
     {
@@ -35,17 +32,18 @@ namespace Data.Repository.Users
         protected override async Task<Group?> Map(NpgsqlDataReader reader)
         {
             Group resulData = new Group();
-            if(!reader.HasRows) return null;
+            if (!reader.HasRows) return null;
             if (reader.HasRows)
             {
                 while (await reader.ReadAsync())
                 {
                     resulData = new Group(
                         id: Convert.ToInt32(reader["id"].ToString()),
-                        idRole: Convert.ToInt32(reader["id_role"]),
-                        name: Convert.ToString(reader["name"]),
-                        description: Convert.ToString(reader["description"]),
-                        isActive: Convert.ToBoolean(reader["is_active"]),
+                        idRole: Convert.ToInt64(reader["id_role"].ToString()),
+name: Convert.ToString(reader["name"].ToString()),
+description: Convert.ToString(reader["description"].ToString()),
+isActive: Convert.ToBoolean(reader["is_active"].ToString()),
+
                         createdAt: Convert.ToDateTime(reader["created_at"]),
                         updatedAt: Convert.ToDateTime(reader["updated_at"]));
                 }
@@ -69,10 +67,11 @@ namespace Data.Repository.Users
                 {
                     Group entity = new Group(
                         id: Convert.ToInt32(reader["id"].ToString()),
-                        idRole: Convert.ToInt32(reader["id_role"]),
-                        name: Convert.ToString(reader["name"]),
-                        description: Convert.ToString(reader["description"]),
-                        isActive: Convert.ToBoolean(reader["is_active"]),
+                        idRole: Convert.ToInt64(reader["id_role"].ToString()),
+name: Convert.ToString(reader["name"].ToString()),
+description: Convert.ToString(reader["description"].ToString()),
+isActive: Convert.ToBoolean(reader["is_active"].ToString()),
+
                         createdAt: Convert.ToDateTime(reader["created_at"]),
                         updatedAt: Convert.ToDateTime(reader["updated_at"]));
 

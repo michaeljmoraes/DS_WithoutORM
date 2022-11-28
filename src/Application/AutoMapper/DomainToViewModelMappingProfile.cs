@@ -1,20 +1,41 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.AutoMapper
 {
     public class DomainToViewModelMappingProfile : Profile
     {
-
         public DomainToViewModelMappingProfile()
         {
-            CreateMap<UserProfile, UserProfileViewModel>();
+            CreateMap<Category, CategoryViewModel>();
+
+            CreateMap<Document, DocumentViewModel>();
+
+            CreateMap<DownloadHistory, DownloadHistoryViewModel>();
+
             CreateMap<Group, GroupViewModel>();
+
+            CreateMap<Role, RoleViewModel>();
+
+            CreateMap<UserGroup, UserGroupViewModel>();
+
+            CreateMap<UserProfile, UserProfileViewModel>();
+
+            //MappingAppendTag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

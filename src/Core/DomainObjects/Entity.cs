@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.DomainObjects
 {
@@ -23,8 +18,8 @@ namespace Core.DomainObjects
         {
             var compareTo = obj as Entity;
 
-            if(ReferenceEquals(this, compareTo)) return true;
-            if(ReferenceEquals(null, compareTo)) return true;
+            if (ReferenceEquals(this, compareTo)) return true;
+            if (ReferenceEquals(null, compareTo)) return true;
 
             return Id.Equals(compareTo.Id);
         }

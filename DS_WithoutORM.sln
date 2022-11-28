@@ -35,8 +35,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{C10AA6B2-E6D3-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sps", "sps", "{94732D4D-33AE-4753-B4BA-A52E7478AC9A}"
 	ProjectSection(SolutionItems) = preProject
+		solutionfiles\db\sps\sps_Category.sql = solutionfiles\db\sps\sps_Category.sql
+		solutionfiles\db\sps\sps_Document.sql = solutionfiles\db\sps\sps_Document.sql
+		solutionfiles\db\sps\sps_DownloadHistory.sql = solutionfiles\db\sps\sps_DownloadHistory.sql
 		solutionfiles\db\sps\sps_Group.sql = solutionfiles\db\sps\sps_Group.sql
+		solutionfiles\db\sps\sps_Role.sql = solutionfiles\db\sps\sps_Role.sql
+		solutionfiles\db\sps\sps_UserGroup.sql = solutionfiles\db\sps\sps_UserGroup.sql
 		solutionfiles\db\sps\sps_UserProfile.sql = solutionfiles\db\sps\sps_UserProfile.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fns", "fns", "{7D0E5746-7395-4A83-A0D5-D4E24BE6F0EC}"
+	ProjectSection(SolutionItems) = preProject
+		solutionfiles\db\fns\fns_Category.sql = solutionfiles\db\fns\fns_Category.sql
+		solutionfiles\db\fns\fns_Document.sql = solutionfiles\db\fns\fns_Document.sql
+		solutionfiles\db\fns\fns_DownloadHistory.sql = solutionfiles\db\fns\fns_DownloadHistory.sql
+		solutionfiles\db\fns\fns_Group.sql = solutionfiles\db\fns\fns_Group.sql
+		solutionfiles\db\fns\fns_Role.sql = solutionfiles\db\fns\fns_Role.sql
+		solutionfiles\db\fns\fns_UserGroup.sql = solutionfiles\db\fns\fns_UserGroup.sql
+		solutionfiles\db\fns\fns_UserProfile.sql = solutionfiles\db\fns\fns_UserProfile.sql
 	EndProjectSection
 EndProject
 Global
@@ -78,6 +94,7 @@ Global
 		{4860B240-214A-436A-B7B7-5A6EFC6263BC} = {F0A1ABD5-8F7C-4A1C-8DCB-F18C29CC1B7E}
 		{C10AA6B2-E6D3-40BF-BC67-DDFB8BDF2C07} = {C85F0898-68D8-49FD-90C7-5E83981A03AF}
 		{94732D4D-33AE-4753-B4BA-A52E7478AC9A} = {C10AA6B2-E6D3-40BF-BC67-DDFB8BDF2C07}
+		{7D0E5746-7395-4A83-A0D5-D4E24BE6F0EC} = {C10AA6B2-E6D3-40BF-BC67-DDFB8BDF2C07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A50DCBC5-257C-4FE9-9CB1-6AB871BCB60A}

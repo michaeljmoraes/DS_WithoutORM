@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace DocumentStorage.Api.Controller
+namespace Api.Controller
 {
     [ApiController]
     public abstract class MainController : ControllerBase

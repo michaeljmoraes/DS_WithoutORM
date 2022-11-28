@@ -1,12 +1,9 @@
-﻿using Core.DomainObjects;
-using Application.Wrappers;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Application.Services;
-using Domain.Models;
-using Domain.CoreModels;
-using Domain.Repository.User;
-using Microsoft.Extensions.Hosting;
+﻿using Application.Wrappers;
 using AutoMapper;
+using Domain.CoreModels;
+using Domain.Models;
+using Domain.Repository.User;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Application.Services
 {
@@ -132,7 +129,7 @@ namespace Application.Services
                 pageResult.Errors = pageResult.Errors.Append(new ModelError(ex.Message));
                 return Task.FromResult(pageResult);
             }
-            return Task.FromResult(pageResult); 
+            return Task.FromResult(pageResult);
         }
 
 

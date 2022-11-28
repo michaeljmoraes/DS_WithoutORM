@@ -1,12 +1,7 @@
-﻿using System.Data;
+﻿using Core.Data;
 using Core.DomainObjects;
 using Npgsql;
-using Core.Data;
-using Domain.Repository.Base;
-using Microsoft.VisualBasic;
-using System.Collections.Generic;
-using FastMember;
-using System.Runtime.InteropServices;
+using System.Data;
 
 namespace Data.Repository.Base
 {

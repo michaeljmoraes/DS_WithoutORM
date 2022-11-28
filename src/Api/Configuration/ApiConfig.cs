@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace DocumentStorage.Api.Configuration
+namespace Api.Configuration
 {
     public static class ApiConfig
     {
@@ -15,12 +15,12 @@ namespace DocumentStorage.Api.Configuration
                 options.ReportApiVersions = true;
             });
 
-            
+
             services.AddVersionedApiExplorer(options =>
             {
                 options.GroupNameFormat = "'v'VVV";
                 options.SubstituteApiVersionInUrl = true;
-                    
+
             });
 
             services.Configure<ApiBehaviorOptions>(options =>
@@ -44,7 +44,7 @@ namespace DocumentStorage.Api.Configuration
             app.UseRouting();
 
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

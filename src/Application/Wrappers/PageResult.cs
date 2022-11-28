@@ -1,9 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Wrappers
 {
@@ -14,13 +9,14 @@ namespace Application.Wrappers
 
         public IEnumerable<ModelError> Errors { get; set; }
 
-        public PageResult() {
+        public PageResult()
+        {
             Errors = Enumerable.Empty<ModelError>();
         }
 
         public PageResult(T data) : this()
         {
-             Data = data;
+            Data = data;
         }
 
     }

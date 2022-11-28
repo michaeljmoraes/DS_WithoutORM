@@ -1,46 +1,48 @@
-﻿using Core.DomainObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core.DomainObjects;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Models
 {
     public class Category : Entity, IAggregateRoot
     {
-        public string Name { get; private set; } = string.Empty;
-        public string? Description { get; private set; }
-        
-        public DateTime CreatedAt { get; private set; }
-        public DateTime UpdatedAt { get; private set; }
+        [Column("name")]
+        public string Name { get; private set; }
+
+        [Column("description")]
+        public string Description { get; private set; }
+
+
 
         public Category() { }
 
-        public Category(string name, string? description, 
-            DateTime createdAt, DateTime updatedAt) 
+        public Category(string name, string description, DateTime createdAt, DateTime updatedAt)
+            : this(null, name, description, createdAt, updatedAt)
+        { }
+
+        public Category(Int64? id, string name, string description, DateTime createdAt, DateTime updatedAt)
         {
+            this.Id = id ?? 0;
             this.Name = name;
             this.Description = description;
-
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
 
             Validate();
         }
 
+
         public override string ToString()
         {
-            return $"{Name}";
+            return $"";
         }
 
         public void Validate()
         {
-            Validations.ValidateEmpty(Name, "Name could not be empty");
-            Validations.ValidateLength(Name, 100, "Name exceeds maximum 100 characters");
+            //Validations.ValidateEmpty(Name, "Name could not be empty");
+            //Validations.ValidateLength(Name, 100, "Name exceeds maximum 100 characters");
 
-            Validations.ValidateLength(Description ?? "", 300, "Description exceeds maximum 300 characters");
+            //Validations.ValidateLength(Description ?? "", 300, "Description exceeds maximum 400 characters");
+
         }
-
     }
 }

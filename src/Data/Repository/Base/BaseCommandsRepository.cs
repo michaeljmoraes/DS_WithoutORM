@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Core.Data;
 using Core.DomainObjects;
-using Npgsql;
-using Core.Data;
 using Domain.Repository.Base;
+using Npgsql;
 using NpgsqlTypes;
+using System.Data;
 
 namespace Data.Repository.Base
 {
@@ -34,9 +28,9 @@ namespace Data.Repository.Base
                     cmd.CommandText = spName;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("_id", NpgsqlDbType.Bigint).Direction = ParameterDirection.Output;
-                    
+
                     InsertCommandParameters(entity, cmd);
-                    
+
                     cmd.Parameters.AddWithValue("_created_at", NpgsqlDbType.Date).Direction = ParameterDirection.Output;
                     cmd.Parameters.AddWithValue("_updated_at", NpgsqlDbType.Date).Direction = ParameterDirection.Output;
 
@@ -69,9 +63,9 @@ namespace Data.Repository.Base
                 cmd.CommandText = spName;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("_id", NpgsqlDbType.Bigint, entity.Id).Direction = ParameterDirection.InputOutput;
-                
+
                 UpdateCommandParameters(entity, cmd);
-                
+
                 cmd.Parameters.AddWithValue("_created_at", NpgsqlDbType.Date).Direction = ParameterDirection.Output;
                 cmd.Parameters.AddWithValue("_updated_at", NpgsqlDbType.Date).Direction = ParameterDirection.Output;
 

@@ -1,19 +1,12 @@
-﻿using Core.Data;
-using Core.DomainObjects;
+
+using Core.Data;
 using Data.Repository.Base;
 using Domain.Models;
 using Domain.Repository;
-using Domain.Repository.User;
 using Npgsql;
 using NpgsqlTypes;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Data.Repository.Users
+namespace Data.Repository
 {
     public class GroupCommandsRepository : BaseCommandsRepository<Group>, IGroupCommandsRepository
     {
@@ -50,6 +43,7 @@ namespace Data.Repository.Users
             cmd.Parameters.AddWithValue("_name", NpgsqlDbType.Text, entity.Name);
             cmd.Parameters.AddWithValue("_description", NpgsqlDbType.Text, entity.Description);
             cmd.Parameters.AddWithValue("_is_active", NpgsqlDbType.Boolean, entity.IsActive);
+
         }
 
         /// <summary>
@@ -59,11 +53,11 @@ namespace Data.Repository.Users
         /// <param name="cmd"></param>
         protected override void UpdateCommandParameters(Group entity, NpgsqlCommand cmd)
         {
-            //cmd.Parameters.AddWithValue("_id", NpgsqlDbType.Bigint, entity.Id);
             cmd.Parameters.AddWithValue("_id_role", NpgsqlDbType.Bigint, entity.IdRole);
             cmd.Parameters.AddWithValue("_name", NpgsqlDbType.Text, entity.Name);
             cmd.Parameters.AddWithValue("_description", NpgsqlDbType.Text, entity.Description);
             cmd.Parameters.AddWithValue("_is_active", NpgsqlDbType.Boolean, entity.IsActive);
+
         }
 
         /// <summary>

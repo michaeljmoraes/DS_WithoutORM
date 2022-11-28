@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace Core.DomainObjects
 {
-    public class Validations 
+    public class Validations
     {
         public static void ValidateEqual(object object1, object object2, string message)
         {

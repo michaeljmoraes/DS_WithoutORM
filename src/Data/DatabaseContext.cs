@@ -1,17 +1,7 @@
 ﻿using Core.Data;
-using Domain.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data
 {
@@ -34,7 +24,7 @@ namespace Data
             _configuration = configuration;
             _connectionString = _configuration.GetSection("ConnectionStrings")["DefaultConnection"] ?? "";
         }
-        
+
 
         /// <summary>
         /// Gets the connection.

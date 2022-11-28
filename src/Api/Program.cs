@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using DocumentStorage.Api.Configuration;
+using Api.Configuration;
 using Application.AutoMapper;
 using Domain.CoreModels;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 var builder = WebApplication.CreateBuilder(args);
 

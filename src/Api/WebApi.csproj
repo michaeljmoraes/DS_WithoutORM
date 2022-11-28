@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Compile Remove="Configuration\AutoMapperConfig.cs" />
-    <Compile Remove="V2\PostController.cs" />
   </ItemGroup>
 
   <ItemGroup>
